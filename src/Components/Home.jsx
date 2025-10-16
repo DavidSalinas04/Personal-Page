@@ -78,7 +78,7 @@ export default function Home() {
                             </a>
 
                             <a
-                                href="https://linkedin.com/in/yourusername"
+                                href="https://linkedin.com/in/davidsalinasescalera"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 aria-label="LinkedIn"
@@ -87,7 +87,7 @@ export default function Home() {
                                 <Linkedin className="h-5 w-5" />
                             </a>
 
-                            <a href="mailto:your@email.com" aria-label="Email" className="btn btn-ghost btn-circle">
+                            <a href="david360salinas@gmail.com" aria-label="Email" className="btn btn-ghost btn-circle">
                                 <Mail className="h-5 w-5" />
                             </a>
                         </div>

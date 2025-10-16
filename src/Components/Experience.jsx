@@ -4,20 +4,20 @@ import { ScrollReveal } from "@/components/ui/scroll-reveal"
 
 const experiences = [
     {
-        title: "Desarrollador Full-Stack",
-        company: "Nombre de la Empresa",
-        period: "Jun 2024 - Presente",
+        title: "Intern",
+        company: "Grupo AlEn",
+        period: "Dic 2024 - Jun 2025",
         description:
-            "Desarrollo de aplicaciones web utilizando React, Next.js y Node.js. Implementación de APIs RESTful y optimización de rendimiento.",
-        technologies: ["React", "Next.js", "TypeScript", "Node.js", "PostgreSQL"],
+            "Optimized and digitized workflows by developing applications and automated processes, improving efficiency and reducing manual work. Streamlined operations through innovative digital solutions, enhancing productivity and scalability.",
+        technologies: ["Power apps", "Power automate", "Html", "Azure", "Power Bi"],
     },
     {
-        title: "Desarrollador Frontend",
-        company: "Otra Empresa",
-        period: "Ene 2024 - May 2024",
+        title: "Event assistant",
+        company: "Auditorium luis Elizondo",
+        period: "August 2022 - Present",
         description:
-            "Creación de interfaces de usuario responsivas y accesibles. Colaboración con diseñadores para implementar diseños pixel-perfect.",
-        technologies: ["React", "Tailwind CSS", "JavaScript", "Git"],
+            "Supported event operations by delivering customer service to guests, assisting with ticketing, seating, and inquiries to ensure a smooth and welcoming experience.",
+        technologies: []
     },
 ]
 
@@ -28,7 +28,7 @@ export default function Experience() {
                 <ScrollReveal variant="slideRight">
                     <div className="space-y-4">
                         <h2 className="text-3xl sm:text-4xl font-bold text-left">
-                            <span className="text-accent font-mono text-lg">02.</span> Experiencia
+                            <span className="text-accent font-mono text-lg">02.</span> Experience
                         </h2>
                         <div className="h-px bg-border max-w-md" />
                     </div>

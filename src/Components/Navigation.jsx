@@ -3,7 +3,7 @@ import { Button } from "./ui/button.tsx"
 
 
 const navItems = [
-    { name: "Inicio", href: "#hero" },
+    { name: "Inicio", href: "#home" },
     { name: "Sobre mí", href: "#about" },
     { name: "Experiencia", href: "#experience" },
     { name: "Proyectos", href: "#projects" },
@@ -12,7 +12,7 @@ const navItems = [
 ]
 
 export default function Navigation() {
-    const [activeSection, setActiveSection] = useState("hero")
+    const [activeSection, setActiveSection] = useState("home")
     const [isScrolled, setIsScrolled] = useState(false)
 
     useEffect(() => {

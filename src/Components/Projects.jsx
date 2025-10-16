@@ -5,11 +5,11 @@ import { ScrollReveal } from "@/components/ui/scroll-reveal"
 
 const projects = [
     {
-        title: "Proyecto E-Commerce",
+        title: "Cáritas Health & Wellness App",
         description:
-            "Plataforma de comercio electrónico completa con carrito de compras, pasarela de pagos y panel de administración.",
+            "Led the development of a mobile app aimed at promoting a healthier lifestyle among employees and volunteers by integrating fitness challenges and wellness conferences.",
         image: "/ecommerce-dashboard.png",
-        technologies: ["Next.js", "TypeScript", "Stripe", "PostgreSQL"],
+        technologies: ["Flask", "Swift", "Dockers", "MySQL"],
         github: "https://github.com/tuusuario/proyecto",
         demo: "https://proyecto-demo.vercel.app",
     },
@@ -40,7 +40,7 @@ export default function Projects() {
                 <ScrollReveal variant="slideRight">
                     <div className="space-y-4">
                         <h2 className="text-3xl sm:text-4xl font-bold text-left">
-                            <span className="text-accent font-mono text-lg">03.</span> Proyectos
+                            <span className="text-accent font-mono text-lg">03.</span> Projects
                         </h2>
                         <div className="h-px bg-border max-w-md" />
                     </div>
