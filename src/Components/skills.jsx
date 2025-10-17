@@ -27,7 +27,7 @@ export default function Skills() {
                 <ScrollReveal variant="slideRight">
                     <div className="space-y-4">
                         <h2 className="text-3xl sm:text-4xl font-bold text-left">
-                            <span className="text-accent font-mono text-lg">04.</span> Habilidades
+                            <span className="text-accent font-mono text-lg">04.</span> Skills
                         </h2>
                         <div className="h-px bg-border max-w-md" />
                     </div>

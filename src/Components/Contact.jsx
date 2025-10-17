@@ -18,7 +18,7 @@ export default function Contact() {
                 <ScrollReveal variant="slideRight">
                     <div className="space-y-4">
                         <h2 className="text-3xl sm:text-4xl font-bold text-left">
-                            <span className="text-accent font-mono text-lg">05.</span> Contacto
+                            <span className="text-accent font-mono text-lg">05.</span> Contact
                         </h2>
                         <div className="h-px bg-border max-w-md" />
                     </div>

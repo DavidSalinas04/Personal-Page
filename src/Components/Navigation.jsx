@@ -3,12 +3,12 @@ import { Button } from "./ui/button.tsx"
 
 
 const navItems = [
-    { name: "Inicio", href: "#home" },
-    { name: "Sobre mí", href: "#about" },
-    { name: "Experiencia", href: "#experience" },
-    { name: "Proyectos", href: "#projects" },
-    { name: "Habilidades", href: "#skills" },
-    { name: "Contacto", href: "#contact" },
+    { name: "Home", href: "#home" },
+    { name: "About me", href: "#about" },
+    { name: "Experience", href: "#experience" },
+    { name: "Projects", href: "#projects" },
+    { name: "Skills", href: "#skills" },
+    { name: "Contact", href: "#contact" },
 ]
 
 export default function Navigation() {
@@ -55,7 +55,7 @@ export default function Navigation() {
                         onClick={() => scrollToSection("#home")}
                         className="text-lg font-mono font-semibold hover:text-accent transition-colors"
                     >
-                        {"<TuNombre />"}
+                        {"David Salinas"}
                     </Button>
 
                     <div className="hidden md:flex items-center gap-1">
