@@ -28,7 +28,7 @@ export default function Home() {
                 initial="hidden"
                 animate="visible"
             >
-                <div className="space-y-8">
+                <div className="space-y-8 text-left">
                     <div className="space-y-4">
                         <motion.p variants={itemVariants} className="text-blue-500 font-mono text-sm">
                             Hi, my name is
@@ -43,30 +43,30 @@ export default function Home() {
 
                         <motion.h2
                             variants={itemVariants}
-                            className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-600"
+                            className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-400"
                         >
                             I build digital experiences.
                         </motion.h2>
                     </div>
 
-                    <motion.p variants={itemVariants} className="text-lg text-gray-700 max-w-2xl mx-auto leading-relaxed">
-                        I am a <span className="font-medium text-gray-900">Computer Engineering student</span> specializing
+                    <motion.p variants={itemVariants} className="text-lg text-gray-400 max-w-2xl text-left leading-relaxed ">
+                        I am a <span className="font-medium text-blue-700">Computer Engineering student</span> specializing
                         in full-stack web development. I am passionate about creating innovative solutions that combine
                         elegant design with efficient code.
                     </motion.p>
 
-                    <motion.div variants={itemVariants} className="flex flex-wrap justify-center items-center gap-4 mt-4">
+                    <motion.div variants={itemVariants} className="flex flex-wrap justify-left items-center gap-4 mt-4">
                         {/* Contact Button */}
                         <Button
                             onClick={scrollToContact}
-                            className="btn btn-primary btn-lg flex items-center gap-2"
+                            className="btn btn-primary btn-lg flex items-center gap-4"
                         >
                             Contact Me
                             <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
                         </Button>
 
                         {/* Social Buttons */}
-                        <div className="flex items-center gap-3">
+                        <div className="flex items-center gap-7">
                             <a
                                 href="https://github.com/DavidSalinas04"
                                 target="_blank"

@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react"
 import { Button } from "./ui/button.tsx"
-
+import { ThemeToggle } from "./Toggle.jsx"
 
 const navItems = [
     { name: "Home", href: "#home" },
@@ -71,6 +71,7 @@ export default function Navigation() {
                                 {item.name}
                             </Button>
                         ))}
+                        <ThemeToggle />
                     </div>
                 </div>
             </div>

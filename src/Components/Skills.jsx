@@ -16,7 +16,7 @@ const skillCategories = [
     },
     {
         title: "Others",
-        skills: ["Python", "Java", "C++", "Algorithms", "Data structure"],
+        skills: ["Python", "Js", "C++", "Algorithms", "Data structure"],
     },
 ]
 
