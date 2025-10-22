@@ -36,7 +36,7 @@ const projects = [
     {
         title: "Startup Stock Recommendation Platform",
         description:
-            "Aplicación web para gestión de proyectos con funcionalidades de colaboración en tiempo real y notificaciones.",
+            "bla bla bla",
         detailDescription:"BLA BLA BLA BLA BLA BLA",
         image: "https://i.imgur.com/jQY4OeY.png",
         images:
@@ -49,18 +49,19 @@ const projects = [
             "dsadasda",
             "dsadasda"
         ],
-        technologies: ["React", "Node.js", "Socket.io", "MongoDB"],
-        github: "https://github.com/tuusuario/proyecto",
+        technologies: ["React", "Node.js", "mySQL"],
+        github: "https://github.com/DavidSalinas04/Hack_Project",
         demo: "https://proyecto-demo.vercel.app",
     },
     {
-        title: "Portfolio Interactivo",
+        title: "Tech Mahindra leetcode",
         description:
-            "Sitio web personal con animaciones 3D, modo oscuro/claro y diseño responsivo optimizado para todos los dispositivos.",
+            "BLA BLA BLA",
         detailDescription:"BLA BLA BLA BLA BLA BLA",
-        image: "https://i.imgur.com/LEZ4MaX.jpeg",
+        image: "https://i.imgur.com/CS9zbtD.png",
         images:
-            ["https://i.imgur.com/LEZ4MaX.jpeg",
+            [
+                "https://i.imgur.com/3jRvsMo.png",
                 "https://i.imgur.com/LEZ4MaX.jpeg",
                 "https://i.imgur.com/LEZ4MaX.jpeg"],
         features:[
@@ -69,9 +70,9 @@ const projects = [
             "dsadasda",
             "dsadasda"
         ],
-        technologies: ["Next.js", "Three.js", "Tailwind CSS", "Framer Motion"],
-        github: "https://github.com/tuusuario/proyecto",
-        demo: "https://proyecto-demo.vercel.app",
+        technologies: ["Next.js", "React", "Judge0", "PostreSQL"],
+        github: "https://github.com/CodeBoostersDev/codeboosters-web",
+        demo: "https://github.com/CodeBoostersDev/codeboosters-core",
     },
 ]
 

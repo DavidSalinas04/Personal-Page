@@ -15,8 +15,8 @@ const skillCategories = [
         skills: ["Git", "Docker", "VS Code", "Figma", "Vercel"],
     },
     {
-        title: "Otros",
-        skills: ["Python", "Java", "C++", "Algoritmos", "Estructuras de Datos"],
+        title: "Others",
+        skills: ["Python", "Java", "C++", "Algorithms", "Data structure"],
     },
 ]
 

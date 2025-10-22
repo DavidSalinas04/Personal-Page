@@ -27,13 +27,7 @@ export default function Contact() {
                 <div className="grid lg:grid-cols-2 gap-12">
                     <ScrollReveal variant="slideLeft" delay={0.2}>
                         <div className="space-y-6">
-                            <div>
-                                <h3 className="text-2xl font-semibold mb-4 text-left">Hablemos</h3>
-                                <p className="text-muted-foreground leading-relaxed text-left">
-                                    Estoy siempre abierto a nuevas oportunidades y colaboraciones. Si tienes un proyecto en mente o
-                                    simplemente quieres conectar, no dudes en contactarme.
-                                </p>
-                            </div>
+
 
                             <div className="space-y-4">
                                 <Card className="p-4 flex items-center gap-4 bg-card/50">
@@ -41,8 +35,8 @@ export default function Contact() {
                                         <Mail className="h-5 w-5 text-accent" />
                                     </div>
                                     <div>
-                                        <p className="text-sm text-muted-foreground">Email</p>
-                                        <p className="font-medium">tu@email.com</p>
+                                        <p className="text-sm text-muted-foreground text-left">Email</p>
+                                        <p className="font-medium">David360salinas@gmail.com</p>
                                     </div>
                                 </Card>
 
@@ -51,8 +45,9 @@ export default function Contact() {
                                         <Phone className="h-5 w-5 text-accent" />
                                     </div>
                                     <div>
-                                        <p className="text-sm text-muted-foreground">Teléfono</p>
-                                        <p className="font-medium">+52 123 456 7890</p>
+                                        <p className="text-sm text-muted-foreground text-left">Phone number</p>
+                                        <p className="font-medium">+52 81 23 51 08 77</p>
+                                        <p className="font-medium">+33 7 74 16 59 78</p>
                                     </div>
                                 </Card>
 
@@ -61,8 +56,9 @@ export default function Contact() {
                                         <MapPin className="h-5 w-5 text-accent" />
                                     </div>
                                     <div>
-                                        <p className="text-sm text-muted-foreground">Ubicación</p>
-                                        <p className="font-medium">Ciudad, México</p>
+                                        <p className="text-sm text-muted-foreground text-left">Location</p>
+                                        <p className="font-medium">Monterrey, México</p>
+                                        <p className="font-medium text-left">Lyon, Francia</p>
                                     </div>
                                 </Card>
                             </div>
@@ -74,40 +70,33 @@ export default function Contact() {
                             <form onSubmit={handleSubmit} className="space-y-6">
                                 <div className="flex flex-col space-y-2 items-start">
                                     <label htmlFor="name" className="text-sm font-medium ">
-                                        Nombre
+                                        Name
                                     </label>
-                                    <Input id="name" placeholder="Tu nombre" required />
+                                    <Input id="name" placeholder="Your name" required />
                                 </div>
 
                                 <div className="flex flex-col space-y-2 items-start">
                                     <label htmlFor="email" className="text-sm font-medium">
                                         Email
                                     </label>
-                                    <Input id="email" type="email" placeholder="tu@email.com" required />
+                                    <Input id="email" type="email" placeholder="your@email.com" required />
                                 </div>
 
                                 <div className="flex flex-col space-y-2 items-start">
                                     <label htmlFor="message" className="text-sm font-medium">
-                                        Mensaje
+                                        Message
                                     </label>
-                                    <Textarea id="message" placeholder="Cuéntame sobre tu proyecto..." rows={5} required />
+                                    <Textarea id="message" placeholder="Tell me about your project ..." rows={5} required />
                                 </div>
 
                                 <button type="submit" className="w-full">
-                                    Enviar Mensaje
+                                    Send message
                                 </button>
                             </form>
                         </Card>
                     </ScrollReveal>
                 </div>
 
-                <ScrollReveal variant="fadeIn" delay={0.6}>
-                    <div className="pt-12 text-center">
-                        <p className="text-sm text-muted-foreground">
-                            Diseñado y construido por <span className="text-accent font-medium">Tu Nombre</span>
-                        </p>
-                    </div>
-                </ScrollReveal>
             </div>
         </section>
     )
