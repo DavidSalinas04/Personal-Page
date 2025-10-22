@@ -1,5 +1,5 @@
 import React from 'react';
-import Home from '../Components/home.jsx';
+import Home from '../Components/Home.jsx';
 import Navigation from '../Components/Navigation.jsx';
 import AboutMe from '../Components/AboutMe.jsx';
 import Experience from '../Components/Experience.jsx';
