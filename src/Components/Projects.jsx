@@ -1,7 +1,7 @@
-import { Card } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
+import { Card } from "@/Components/ui/card"
+import { Badge } from "@/Components/ui/badge"
 import { ExternalLink, Github } from "lucide-react"
-import { ScrollReveal } from "@/components/ui/scroll-reveal"
+import { ScrollReveal } from "@/Components/ui/scroll-reveal"
 import {useState} from "react";
 import ProjectModal from "@/Components/Projects-modal.jsx";
 import { Button } from "@/Components/ui/button.tsx"

@@ -1,6 +1,6 @@
-import { Card } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { ScrollReveal } from "@/components/ui/scroll-reveal"
+import { Card } from "@/Components/ui/card"
+import { Badge } from "@/Components/ui/badge"
+import { ScrollReveal } from "@/Components/ui/scroll-reveal"
 
 const experiences = [
     {

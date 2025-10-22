@@ -1,8 +1,8 @@
-import { Card } from "@/components/ui/card"
+import { Card } from "@/Components/ui/card"
 import { Input } from "@/Components/ui/input.js"
 import { Textarea } from "@/Components/ui/textarea.js"
 import { Mail, MapPin, Phone } from "lucide-react"
-import { ScrollReveal } from "@/components/ui/scroll-reveal"
+import { ScrollReveal } from "@/Components/ui/scroll-reveal"
 import React from 'react'
 
 export default function Contact() {

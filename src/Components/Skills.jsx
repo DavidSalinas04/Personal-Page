@@ -1,5 +1,5 @@
-import { Card } from "@/components/ui/card"
-import { ScrollReveal } from "@/components/ui/scroll-reveal"
+import { Card } from "@/Components/ui/card"
+import { ScrollReveal } from "@/Components/ui/scroll-reveal"
 
 const skillCategories = [
     {
