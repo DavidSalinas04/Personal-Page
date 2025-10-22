@@ -131,13 +131,13 @@ export default function ProjectModal({ project, isOpen, onClose }) {
                                 <Button asChild className="gap-2">
                                     <a href={project.github} target="_blank" rel="noopener noreferrer">
                                         <Github className="h-4 w-4" />
-                                        Ver Código
+                                        See code
                                     </a>
                                 </Button>
                                 <Button variant="outline" asChild className="gap-2 bg-transparent">
                                     <a href={project.demo} target="_blank" rel="noopener noreferrer">
                                         <ExternalLink className="h-4 w-4" />
-                                        Ver Demo
+                                        See demo
                                     </a>
                                 </Button>
                             </div>
