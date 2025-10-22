@@ -9,7 +9,7 @@ const experiences = [
         period: "Dic 2024 - Jun 2025",
         description:
             "Optimized and digitized workflows by developing applications and automated processes, improving efficiency and reducing manual work. Streamlined operations through innovative digital solutions, enhancing productivity and scalability.",
-        technologies: ["Power apps", "Power automate", "Html", "Azure", "Power Bi"],
+        technologies: ["Power apps", "Power automate", "Html", "Azure", "Power Bi", "Google cloud functions"],
     },
     {
         title: "Event assistant",
