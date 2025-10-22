@@ -123,7 +123,7 @@ export default function Projects() {
                                         <Button variant="ghost" size="sm" asChild onClick={(e) => e.stopPropagation()}>
                                             <a href={project.github} target="_blank" rel="noopener noreferrer" className="gap-2">
                                                 <Github className="h-4 w-4" />
-                                                Código
+                                                Code
                                             </a>
                                         </Button>
                                         <Button variant="ghost" size="sm" asChild onClick={(e) => e.stopPropagation()}>
