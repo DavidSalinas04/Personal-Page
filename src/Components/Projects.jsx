@@ -21,7 +21,7 @@ const projects = [
             "https://i.imgur.com/LHakHK9.jpeg",
             "https://i.imgur.com/LEZ4MaX.jpeg"],
         features:[
-            "Led the development of a mobile application designed to promote a healthier lifestyle among employees and " +
+            "Mobile application designed to promote a healthier lifestyle among employees and " +
             "volunteers through fitness challenges and wellness conferences.",
             "Designed the app in Swift, ensuring a user-friendly and engaging mobile experience.",
             "Developed the backend using Flask, handling all API requests and deploying on Linux servers provided by " +
@@ -36,7 +36,8 @@ const projects = [
     {
         title: "Startup Stock Recommendation Platform",
         description:
-            "bla bla bla",
+            "Developed a React web application that compares startups based on time and cost, integrating ChatGPT to " +
+            "provide personalized reflections and investment recommendations.",
         detailDescription:"BLA BLA BLA BLA BLA BLA",
         image: "https://i.imgur.com/jQY4OeY.png",
         images:
@@ -44,19 +45,22 @@ const projects = [
                 "https://i.imgur.com/LEZ4MaX.jpeg",
                 "https://i.imgur.com/LEZ4MaX.jpeg"],
         features:[
-            "dsadasda",
-            "dsadasda",
-            "dsadasda",
-            "dsadasda"
+            "Developed a web application that provides personalized stock recommendations for startups, offering " +
+            "intelligent suggestions based on market analysis.",
+            "Designed the frontend using React, creating an intuitive and responsive user interface.",
+            "Built the backend with Node.js and Express to handle user interactions and API requests, " +
+            "integrating OpenAI’s API for smart recommendations.",
+            "Utilized PostgreSQL for data storage, ensuring efficient and secure management of user and market data."
         ],
-        technologies: ["React", "Node.js", "mySQL"],
+        technologies: ["React", "Node.js", "Express","OpenIA API", "PostgreSQL"],
         github: "https://github.com/DavidSalinas04/Hack_Project",
         demo: "https://proyecto-demo.vercel.app",
     },
     {
         title: "Tech Mahindra leetcode",
         description:
-            "BLA BLA BLA",
+            "web platform for Tech Mahindra employees to practice coding problems, with real-time feedback " +
+            "using OpenAI and automated evaluation via Judge0.",
         detailDescription:"BLA BLA BLA BLA BLA BLA",
         image: "https://i.imgur.com/CS9zbtD.png",
         images:
@@ -107,16 +111,20 @@ export default function Projects() {
                                 </div>
 
 
-                                <div className="p-6 space-y-4">
-                                    <h3 className="text-xl font-semibold">{project.title}</h3>
-                                    <p className="text-sm text-muted-foreground leading-relaxed">{project.description}</p>
+                                <div className="p-6 flex flex-col justify-between h-[310px]">
+                                    <div>
+                                        <h3 className="text-xl font-semibold">{project.title}</h3>
+                                        <p className="text-sm text-muted-foreground leading-relaxed h-[100px] overflow-hidden">
+                                            {project.description}
+                                        </p>
 
-                                    <div className="flex flex-wrap gap-2">
-                                        {project.technologies.map((tech) => (
-                                            <Badge key={tech} variant="secondary" className="text-xs">
-                                                {tech}
-                                            </Badge>
-                                        ))}
+                                        <div className="flex flex-wrap gap-2 mt-5">
+                                            {project.technologies.map((tech) => (
+                                                <Badge key={tech} variant="secondary" className="text-xs">
+                                                    {tech}
+                                                </Badge>
+                                            ))}
+                                        </div>
                                     </div>
 
                                     <div className="flex items-center gap-3 pt-2">
@@ -134,6 +142,7 @@ export default function Projects() {
                                         </Button>
                                     </div>
                                 </div>
+
                             </Card>
                         </ScrollReveal>
                     ))}
