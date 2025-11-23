@@ -4,7 +4,7 @@ import { Textarea } from "@/Components/ui/textarea.js"
 import { Mail, MapPin, Phone } from "lucide-react"
 import { ScrollReveal } from "@/Components/ui/scroll-reveal"
 import React from 'react'
-import { Button } from "@/components/ui/button.js"
+import { Button } from './ui/button.tsx'
 
 export default function Contact() {
     const handleSubmit = async (e) => {
