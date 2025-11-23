@@ -41,8 +41,8 @@ const projects = [
 
         detailDescription:
             "This project was built as a business-idea generator focused on helping users evaluate and compare startups" +
-            " before making an investment. The platform allows users to select two startups—small, medium, or " +
-            "growing—and sends their parameters to ChatGPT, which returns a detailed recommendation on the best " +
+            " before making an investment. The platform allows users to select two startups small, medium, or " +
+            "growing and sends their parameters to ChatGPT, which returns a detailed recommendation on the best " +
             "investment option at that moment. We integrated PayPal to enable direct transactions within the platform, " +
             "and added an admin-style interface where users can register and manage new startups. The goal was to " +
             "simplify investment decisions by combining data-driven comparison with AI-powered insights.",
