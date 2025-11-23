@@ -12,7 +12,7 @@ export default function Contact() {
         const form = e.target
 
         try{
-            const res= await fetch("http://localhost:3001/api/contact", {
+            const res= await fetch("https://personal-page-i8xh.onrender.com/api/contact", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({
