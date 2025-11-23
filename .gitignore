@@ -7,7 +7,7 @@ build/
 .next/
 
 # Environment variables
-.env
+backend/.env
 .env.local
 .env.*.local
 
@@ -44,4 +44,7 @@ Thumbs.db
 coverage/
 *.log
 
+#images
 images/
+
+
