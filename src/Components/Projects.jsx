@@ -34,25 +34,31 @@ const projects = [
         demo: "https://proyecto-demo.vercel.app",
     },
     {
-        title: "Startup Stock Recommendation Platform",
+        title: "Startup Recommendation Platform",
         description:
-            "Developed a React web application that compares startups based on time and cost, integrating ChatGPT to " +
-            "provide personalized reflections and investment recommendations.",
-        detailDescription:"BLA BLA BLA BLA BLA BLA",
+            "Created a platform that compares startups of different sizes to identify the best investment opportunities," +
+            " using ChatGPT to analyze key parameters and provide real-time recommendations.",
+
+        detailDescription:
+            "This project was built as a business-idea generator focused on helping users evaluate and compare startups" +
+            " before making an investment. The platform allows users to select two startups—small, medium, or " +
+            "growing—and sends their parameters to ChatGPT, which returns a detailed recommendation on the best " +
+            "investment option at that moment. We integrated PayPal to enable direct transactions within the platform, " +
+            "and added an admin-style interface where users can register and manage new startups. The goal was to " +
+            "simplify investment decisions by combining data-driven comparison with AI-powered insights.",
+
         image: "https://i.imgur.com/jQY4OeY.png",
         images:
-            ["https://i.imgur.com/LEZ4MaX.jpeg",
-                "https://i.imgur.com/LEZ4MaX.jpeg",
-                "https://i.imgur.com/LEZ4MaX.jpeg"],
-        features:[
-            "Developed a web application that provides personalized stock recommendations for startups, offering " +
-            "intelligent suggestions based on market analysis.",
-            "Designed the frontend using React, creating an intuitive and responsive user interface.",
-            "Built the backend with Node.js and Express to handle user interactions and API requests, " +
-            "integrating OpenAI’s API for smart recommendations.",
-            "Utilized PostgreSQL for data storage, ensuring efficient and secure management of user and market data."
+                ["https://i.imgur.com/sVwkJMB.png",
+                "https://i.imgur.com/0SVjrbk.png"],
+        features: [
+            "AI-powered startup comparison using ChatGPT, evaluating key parameters to determine the best investment option.",
+            "User-friendly interface to compare startups of different sizes with real-time recommendations.",
+            "Integrated PayPal for secure and direct investment transactions.",
+            "Admin panel to register new startups, manage existing ones, and update comparison data.",
         ],
-        technologies: ["React", "Node.js", "Express","OpenIA API", "PostgreSQL"],
+
+        technologies: ["React", "Node.js", "Express","OpenIA API", "PayPal", "PostgreSQL"],
         github: "https://github.com/DavidSalinas04/Hack_Project",
         demo: "https://proyecto-demo.vercel.app",
     },
@@ -123,12 +129,12 @@ export default function Projects() {
 
                                 <div className="p-6 flex flex-col justify-between h-[310px]">
                                     <div>
-                                        <h3 className="text-xl font-semibold">{project.title}</h3>
+                                        <h3 className="text-xl font-semibold mb-3">{project.title}</h3>
                                         <p className="text-sm text-muted-foreground leading-relaxed h-[100px] overflow-hidden">
                                             {project.description}
                                         </p>
 
-                                        <div className="flex flex-wrap gap-2 mt-5">
+                                        <div className="flex flex-wrap gap-2 mt-3">
                                             {project.technologies.map((tech) => (
                                                 <Badge key={tech} variant="secondary" className="text-xs">
                                                     {tech}

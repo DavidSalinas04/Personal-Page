@@ -134,12 +134,12 @@ export default function ProjectModal({ project, isOpen, onClose }) {
                                         See code
                                     </a>
                                 </Button>
-                                <Button variant="outline" asChild className="gap-2 bg-transparent">
-                                    <a href={project.demo} target="_blank" rel="noopener noreferrer">
-                                        <ExternalLink className="h-4 w-4" />
-                                        See demo
-                                    </a>
+                                <Button variant="outline" className="gap-2 bg-transparent" disabled onClick={(e) => e.preventDefault()} // evita navegación si está disabled
+                                >
+                                    <ExternalLink className="h-4 w-4" />
+                                    See demo
                                 </Button>
+
                             </div>
                         </div>
                     </div>
