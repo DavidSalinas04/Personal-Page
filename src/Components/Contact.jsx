@@ -1,41 +1,39 @@
-import { Card } from "@/Components/ui/card"
-import { Input } from "@/Components/ui/input.js"
-import { Textarea } from "@/Components/ui/textarea.js"
-import { Mail, MapPin, Phone } from "lucide-react"
-import { ScrollReveal } from "@/Components/ui/scroll-reveal"
-import React from 'react'
-import { Button } from './ui/button.tsx'
+import { Card } from "@/Components/ui/card";
+import { Input } from "@/Components/ui/input.js";
+import { Textarea } from "@/Components/ui/textarea.js";
+import { Mail, MapPin, Phone } from "lucide-react";
+import { ScrollReveal } from "@/Components/ui/scroll-reveal";
+import React, { useRef } from "react";
+import { Button } from './ui/button.tsx';
+import emailjs from "@emailjs/browser";
+
+
 
 export default function Contact() {
-    const handleSubmit = async (e) => {
-        e.preventDefault()
-        const form = e.target
+    const formRef = useRef();
 
-        try{
-            const res= await fetch("https://personal-page-i8xh.onrender.com/api/contact", {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({
-                    name: form.name.value,
-                    email: form.email.value,
-                    message: form.message.value
-                })
-            })
-            if(res.ok){
-                alert("Message sent")
-                form.reset()
-            } else {
-                alert("Failed to send message")
-                console.log(name)
+    const handleSubmit = (e) => {
+        e.preventDefault();
 
-
-            }
-        } catch (error) {
-            console.log(error)
-        }
-
-    }
-
+        emailjs
+            .sendForm(
+                "service_4g7fvyr",
+                "template_5v5mjip",
+                formRef.current,
+                "9Z59DkbiszPjdhYsa"
+            )
+            .then(
+                (result) => {
+                    console.log(result.text);
+                    alert("Message sent!");
+                    formRef.current.reset();
+                },
+                (error) => {
+                    console.log(error.text);
+                    alert("Failed to send message");
+                }
+            );
+    };
 
     return (
         <section id="contact" className="py-24">
@@ -52,8 +50,6 @@ export default function Contact() {
                 <div className="grid lg:grid-cols-2 gap-12">
                     <ScrollReveal variant="slideLeft" delay={0.2}>
                         <div className="space-y-6">
-
-
                             <div className="space-y-4">
                                 <Card className="p-4 flex items-center gap-4 bg-card/50">
                                     <div className="p-3 rounded-lg bg-accent/10">
@@ -92,26 +88,26 @@ export default function Contact() {
 
                     <ScrollReveal variant="slideRight" delay={0.4}>
                         <Card className="p-6">
-                            <form onSubmit={handleSubmit} className="space-y-6">
+                            <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
                                 <div className="flex flex-col space-y-2 items-start">
                                     <label htmlFor="name" className="text-sm font-medium ">
                                         Name
                                     </label>
-                                    <Input id="name" placeholder="Your name" required />
+                                    <Input id="name" name="name" placeholder="Your name" required />
                                 </div>
 
                                 <div className="flex flex-col space-y-2 items-start">
                                     <label htmlFor="email" className="text-sm font-medium">
                                         Email
                                     </label>
-                                    <Input id="email" type="email" placeholder="your@email.com" required />
+                                    <Input id="email" name="email" type="email" placeholder="your@email.com" required />
                                 </div>
 
                                 <div className="flex flex-col space-y-2 items-start">
                                     <label htmlFor="message" className="text-sm font-medium">
                                         Message
                                     </label>
-                                    <Textarea id="message" placeholder="Tell me about your project ..." rows={5} required />
+                                    <Textarea id="message" name="message" placeholder="Tell me about your project ..." rows={5} required />
                                 </div>
 
                                 <Button type="submit" className="w-full">
@@ -121,8 +117,7 @@ export default function Contact() {
                         </Card>
                     </ScrollReveal>
                 </div>
-
             </div>
         </section>
-    )
+    );
 }

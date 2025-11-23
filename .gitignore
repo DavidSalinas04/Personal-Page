@@ -6,10 +6,6 @@ dist/
 build/
 .next/
 
-# Environment variables
-backend/.env
-.env.local
-.env.*.local
 
 # Logs
 npm-debug.log*
