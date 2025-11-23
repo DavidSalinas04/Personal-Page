@@ -4,11 +4,36 @@ import { Textarea } from "@/Components/ui/textarea.js"
 import { Mail, MapPin, Phone } from "lucide-react"
 import { ScrollReveal } from "@/Components/ui/scroll-reveal"
 import React from 'react'
+import { Button } from "@/components/ui/button.js"
 
 export default function Contact() {
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault()
-        console.log("Formulario enviado")
+        const form = e.target
+
+        try{
+            const res= await fetch("http://localhost:3001/api/contact", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                    name: form.name.value,
+                    email: form.email.value,
+                    message: form.message.value
+                })
+            })
+            if(res.ok){
+                alert("Message sent")
+                form.reset()
+            } else {
+                alert("Failed to send message")
+                console.log(name)
+
+
+            }
+        } catch (error) {
+            console.log(error)
+        }
+
     }
 
 
@@ -89,9 +114,9 @@ export default function Contact() {
                                     <Textarea id="message" placeholder="Tell me about your project ..." rows={5} required />
                                 </div>
 
-                                <button type="submit" className="w-full">
+                                <Button type="submit" className="w-full">
                                     Send message
-                                </button>
+                                </Button>
                             </form>
                         </Card>
                     </ScrollReveal>
