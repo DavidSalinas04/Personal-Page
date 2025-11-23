@@ -1,19 +1,23 @@
-import { Card } from "@/Components/ui/card";
-import { Input } from "@/Components/ui/input.js";
-import { Textarea } from "@/Components/ui/textarea.js";
-import { Mail, MapPin, Phone } from "lucide-react";
-import { ScrollReveal } from "@/Components/ui/scroll-reveal";
-import React, { useRef } from "react";
-import { Button } from './ui/button.tsx';
-import emailjs from "@emailjs/browser";
+import { useRef, useState } from "react"
+import { motion, AnimatePresence } from "framer-motion"
 
-
+import { Card } from "@/Components/ui/card"
+import { Input } from "@/Components/ui/input"
+import { Textarea } from "@/Components/ui/textarea"
+import { Mail, MapPin, Phone, Check } from "lucide-react"
+import { ScrollReveal } from "@/Components/ui/scroll-reveal"
+import { Button } from "./ui/button"
+import emailjs from "@emailjs/browser"
 
 export default function Contact() {
-    const formRef = useRef();
+    const formRef = useRef()
+    const [isSending, setIsSending] = useState(false)
+    const [isSent, setIsSent] = useState(false)
 
     const handleSubmit = (e) => {
-        e.preventDefault();
+        e.preventDefault()
+
+        setIsSending(true)
 
         emailjs
             .sendForm(
@@ -23,17 +27,21 @@ export default function Contact() {
                 "9Z59DkbiszPjdhYsa"
             )
             .then(
-                (result) => {
-                    console.log(result.text);
-                    alert("Message sent!");
-                    formRef.current.reset();
+                () => {
+                    setIsSending(false)
+                    setIsSent(true)
+
+                    setTimeout(() => {
+                        setIsSent(false)
+                        formRef.current.reset()
+                    }, 3000)
                 },
-                (error) => {
-                    console.log(error.text);
-                    alert("Failed to send message");
+                () => {
+                    setIsSending(false)
+                    alert("Error")
                 }
-            );
-    };
+            )
+    }
 
     return (
         <section id="contact" className="py-24">
@@ -87,37 +95,78 @@ export default function Contact() {
                     </ScrollReveal>
 
                     <ScrollReveal variant="slideRight" delay={0.4}>
-                        <Card className="p-6">
+                        <Card className="p-6 relative overflow-hidden">
                             <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
                                 <div className="flex flex-col space-y-2 items-start">
-                                    <label htmlFor="name" className="text-sm font-medium ">
+                                    <label htmlFor="name" className="text-sm font-medium">
                                         Name
                                     </label>
-                                    <Input id="name" name="name" placeholder="Your name" required />
+                                    <Input name="name" placeholder="Your name" required disabled={isSending || isSent} />
                                 </div>
 
                                 <div className="flex flex-col space-y-2 items-start">
                                     <label htmlFor="email" className="text-sm font-medium">
                                         Email
                                     </label>
-                                    <Input id="email" name="email" type="email" placeholder="your@email.com" required />
+                                    <Input name="email" type="email" placeholder="your@email.com"
+                                           required disabled={isSending || isSent} />
                                 </div>
 
                                 <div className="flex flex-col space-y-2 items-start">
                                     <label htmlFor="message" className="text-sm font-medium">
                                         Message
                                     </label>
-                                    <Textarea id="message" name="message" placeholder="Tell me about your project ..." rows={5} required />
+                                    <Textarea
+                                        name="message"
+                                        placeholder="Tell me about your project..."
+                                        rows={5}
+                                        required
+                                        disabled={isSending || isSent}
+                                    />
                                 </div>
 
-                                <Button type="submit" className="w-full">
-                                    Send message
+                                <Button type="submit" className="w-full" disabled={isSending || isSent}>
+                                    {isSending ? "Sending..." : isSent ? "Sent" : "Send message"}
                                 </Button>
                             </form>
+
+
+                            <AnimatePresence>
+                                {isSent && (
+                                    <motion.div
+                                        initial={{ scale: 0, opacity: 0 }}
+                                        animate={{ scale: 1, opacity: 1 }}
+                                        exit={{ scale: 0, opacity: 0 }}
+                                        transition={{ type: "spring", duration: 0.5 }}
+                                        className="absolute inset-0 bg-background/95 backdrop-blur-sm flex items-center justify-center"
+                                    >
+                                        <motion.div
+                                            initial={{ y: 20, opacity: 0 }}
+                                            animate={{ y: 0, opacity: 1 }}
+                                            transition={{ delay: 0.2 }}
+                                            className="text-center space-y-4"
+                                        >
+                                            <motion.div
+                                                initial={{ scale: 0 }}
+                                                animate={{ scale: 1, rotate: 360 }}
+                                                transition={{ type: "spring", delay: 0.1, duration: 0.6 }}
+                                                className="mx-auto w-16 h-16 rounded-full bg-accent/20 flex items-center justify-center"
+                                            >
+                                                <Check className="h-8 w-8 text-accent" />
+                                            </motion.div>
+
+                                            <div>
+                                                <h3 className="text-2xl font-bold text-accent">Message Sent</h3>
+                                                <p className="text-muted-foreground mt-2">I’ll get back to you soon</p>
+                                            </div>
+                                        </motion.div>
+                                    </motion.div>
+                                )}
+                            </AnimatePresence>
                         </Card>
                     </ScrollReveal>
                 </div>
             </div>
         </section>
-    );
+    )
 }
