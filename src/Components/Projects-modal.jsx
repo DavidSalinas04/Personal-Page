@@ -49,11 +49,11 @@ export default function ProjectModal({ project, isOpen, onClose }) {
                         </Button>
 
                         {/* Image Gallery */}
-                        <div className="relative bg-muted flex justify-center items-center mx-auto mt-8 rounded-lg overflow-hidden max-w-2xl h-[500px] bg-white">
+                        <div className="relative flex justify-center  items-center w-full mt-8 rounded-lg overflow-hidden  h-[500px]">
                             <img
                                 src={project.images[currentImageIndex] || "/placeholder.svg"}
                                 alt={`${project.title} - Image ${currentImageIndex + 1}`}
-                                className="max-h-full max-w-full object-contain"
+                                className="h-100 max-w-full object-contain"
                             />
 
 
@@ -134,12 +134,12 @@ export default function ProjectModal({ project, isOpen, onClose }) {
                                         See code
                                     </a>
                                 </Button>
-                                <Button variant="outline" asChild className="gap-2 bg-transparent">
-                                    <a href={project.demo} target="_blank" rel="noopener noreferrer">
-                                        <ExternalLink className="h-4 w-4" />
-                                        See demo
-                                    </a>
+                                <Button variant="outline" className="gap-2 bg-transparent" disabled onClick={(e) => e.preventDefault()} // evita navegación si está disabled
+                                >
+                                    <ExternalLink className="h-4 w-4" />
+                                    See demo
                                 </Button>
+
                             </div>
                         </div>
                     </div>
