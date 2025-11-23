@@ -11,8 +11,8 @@ const skillCategories = [
         skills: ["Node.js", "Express", "PostgreSQL", "MongoDB", "REST APIs"],
     },
     {
-        title: "Herramientas",
-        skills: ["Git", "Docker", "VS Code", "Figma", "Vercel"],
+        title: "Tools",
+        skills: ["Git", "Docker", "Linux", "Figma", "Vercel"],
     },
     {
         title: "Others",

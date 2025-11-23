@@ -49,11 +49,11 @@ export default function ProjectModal({ project, isOpen, onClose }) {
                         </Button>
 
                         {/* Image Gallery */}
-                        <div className="relative bg-muted flex justify-center items-center mx-auto mt-8 rounded-lg overflow-hidden max-w-2xl h-[500px] bg-white">
+                        <div className="relative flex justify-center  items-center w-full mt-8 rounded-lg overflow-hidden  h-[500px]">
                             <img
                                 src={project.images[currentImageIndex] || "/placeholder.svg"}
                                 alt={`${project.title} - Image ${currentImageIndex + 1}`}
-                                className="max-h-full max-w-full object-contain"
+                                className="h-100 max-w-full object-contain"
                             />
 
 
