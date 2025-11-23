@@ -49,7 +49,7 @@ export default function Navigation() {
             }`}
         >
             <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
-                <div className="flex items-center justify-between h-16">
+                <div className="flex items-center h-16 ">
                     <Button
                         variant = 'Ghost'
                         onClick={() => scrollToSection("#home")}
@@ -58,7 +58,7 @@ export default function Navigation() {
                         {"David Salinas"}
                     </Button>
 
-                    <div className="hidden md:flex items-center gap-1">
+                    <div className="hidden md:flex items-center gap-1 ml-auto">
                         {navItems.slice(1).map((item) => (
                             <Button
                                 key={item.name}
@@ -71,8 +71,9 @@ export default function Navigation() {
                                 {item.name}
                             </Button>
                         ))}
-                        <ThemeToggle />
+
                     </div>
+                    <ThemeToggle />
                 </div>
             </div>
         </nav>
